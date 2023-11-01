@@ -42,7 +42,7 @@ def main():
 	parser = argparse.ArgumentParser(description="A simple program that takes two arguments")
 
 	# Add the optional argument -n with a default value of 0
-	parser.add_argument("-p", type=str, default=b"Detriot-Red-4Noble-Pursuits", help="an optional binary argument")
+	parser.add_argument("-p", type=str, default=b"Detriot-Red", help="an optional binary argument")
 	global password
 	password = args.p
 
