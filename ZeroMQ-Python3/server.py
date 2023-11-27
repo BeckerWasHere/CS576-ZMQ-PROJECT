@@ -25,13 +25,13 @@ from Sender.security import asymmetric_decrypt
 def main() -> None:
 	parser = argparse.ArgumentParser(description="A simple program that recieves a file from another IP on the network")
 
-	# Add the optional argument -p
-	parser.add_argument("-p", type=str, default=b"Detriot-Red", help="an optional argument using in the intial handshake")
+	# Add the optional argument -P
+	parser.add_argument("-P", type=str, default=b"Detriot-Red", help="an optional argument using in the intial handshake")
 
 	args = parser.parse_args()
 
 	global symmetric_password
-	symmetric_password = bytes(str(args.p), 'utf-8')
+	symmetric_password = bytes(str(args.P), 'utf-8')
 
 	global context
 	socket = context.socket(zmq.REP)
